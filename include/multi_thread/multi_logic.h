@@ -1,5 +1,6 @@
 #pragma once
 #include <mutex>
+#include <memory>
 
 class multi_logic {
 private:

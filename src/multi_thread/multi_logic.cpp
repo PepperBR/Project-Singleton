@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/multi_thread/multi_logic.h"
+#include "multi_thread/multi_logic.h"
 
 std::unique_ptr<multi_logic> multi_logic::instance = nullptr;
 
@@ -16,7 +16,7 @@ multi_logic& multi_logic::getSingleton()
 
         if(instance == nullptr)
         {
-            instance = std::make_unique<multi_logic>();
+            instance = std::unique_ptr<multi_logic>(new multi_logic());
         }
     }
     return *instance;

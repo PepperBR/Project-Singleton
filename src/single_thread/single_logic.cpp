@@ -1,7 +1,10 @@
 #include <iostream>
-#include "include/single_thread/single_logic.h"
+#include "single_thread/single_logic.h"
 
 std::unique_ptr<single_logic> single_logic::instance = nullptr;
+
+single_logic::single_logic() {
+}
 
 void single_logic::display()
 {
@@ -12,7 +15,7 @@ single_logic& single_logic::getSingleton()
 {
     if (instance == nullptr)
     {
-        instance = std::make_unique<single_logic>();
+        instance = std::unique_ptr<single_logic>(new single_logic());
     }
     return *instance;
 }
