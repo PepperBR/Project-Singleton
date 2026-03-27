@@ -10,5 +10,8 @@ private:
 
 public:
     static multi_logic& getSingleton();
-    void display(); 
+    void display();
+
+    multi_logic(const multi_logic&) = delete;
+    multi_logic& operator=(const multi_logic&) = delete;
 };

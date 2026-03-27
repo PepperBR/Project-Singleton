@@ -3,8 +3,7 @@
 
 std::unique_ptr<single_logic> single_logic::instance = nullptr;
 
-single_logic::single_logic() {
-}
+single_logic::single_logic() {}
 
 void single_logic::display()
 {

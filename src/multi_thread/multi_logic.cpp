@@ -1,7 +1,12 @@
 #include <iostream>
 #include "multi_thread/multi_logic.h"
+#include <mutex>
+
+std::mutex multi_logic::mutex;
 
 std::unique_ptr<multi_logic> multi_logic::instance = nullptr;
+
+multi_logic::multi_logic() {}
 
 void multi_logic::display()
 {
